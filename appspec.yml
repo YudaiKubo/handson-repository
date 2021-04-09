@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "<TASK_DEFINITION>"
+        LoadBalancerInfo:
+            ContainerName: "kubo-handson-test-container" #自分のコンテナ名に変更してください
+            ContainerPort: 80
